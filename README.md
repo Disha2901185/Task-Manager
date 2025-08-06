@@ -57,7 +57,7 @@ Copy
 Edit
 PORT=3001
 MONGO_URI=your_mongo_connection_string
-Run the backend server:
+Start the backend server:
 
 bash
 Copy
@@ -70,7 +70,7 @@ Edit
 cd ../frontend
 npm install
 npm run dev
-Visit in browser: http://localhost:5173
+Open in browser: http://localhost:5173
 
 🛠️ Tech Stack
 Frontend: React + Vite + TailwindCSS
@@ -85,6 +85,6 @@ Communication: Axios
 Name: Disha Kansal
 GitHub: Disha2901185
 
-vbnet
+yaml
 Copy
 Edit
