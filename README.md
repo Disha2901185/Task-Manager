@@ -56,13 +56,13 @@ export default tseslint.config({
 =======
 # Project-Task-Manager
 
-A full-stack task management system that allows users to efficiently manage their **Projects** and **Tasks** with a user-friendly interface and robust backend.
+A full-stack task management system that allows users to efficiently manage their **Tasks** with a user-friendly interface and robust backend.
 
 ---
 
 ## 🚀 Features
 
-✅ Project and Task CRUD operations  
+✅ Task CRUD operations  
 ✅ Task filtering by status (To Do, In Progress, Done)  
 ✅ Status badges with dynamic colors  
 ✅ Due date display  
@@ -74,7 +74,7 @@ A full-stack task management system that allows users to efficiently manage thei
 
 ## 📁 Folder Structure
 
-Project-Task-Manager/
+Task-Manager/
 │
 ├── backend/ # Express.js server with MongoDB
 │ ├── models/
@@ -98,7 +98,7 @@ Edit
 ### 🔹 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Disha2901185/Project-Task-Manager.git
+git clone https://github.com/Disha2901185/Task-Manager.git
 cd Project-Task-Manager
 ⚙️ Backend Setup (/backend)
 bash
