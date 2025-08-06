@@ -54,7 +54,7 @@ export default tseslint.config({
 })
 ```
 =======
-# Project-Task-Manager
+# Task-Manager
 
 A full-stack task management system that allows users to efficiently manage their **Tasks** with a user-friendly interface and robust backend.
 
