@@ -5,6 +5,7 @@ import { addUser } from "../redux/userSlice";
 import { Link, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { api } from "../apiConfig/api";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -14,10 +15,10 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const resp = await axios.post(`http://localhost:3001/login`, {
-        emailId,
-        password,
-      });
+      const resp = await api.post("/login", {
+  emailId,
+  password,
+});
 console.log(resp?.data);
 
       if (resp?.data?.success) {
