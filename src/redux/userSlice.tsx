@@ -4,7 +4,7 @@ const userSice = createSlice({
   name: "user",
   initialState: null,
   reducers: {
- addUser: (state, action) => {
+ addUser: (_state, action) => {
   if (action.payload) {
     return action.payload;
   }
@@ -21,7 +21,7 @@ const userSice = createSlice({
 
   return null;
  },
-    removeUser: (state, action) => {
+    removeUser: () => {
       return null;
     },
   },

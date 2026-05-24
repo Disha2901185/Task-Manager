@@ -30,7 +30,6 @@ const defaultForm: Partial<Task> = {
 
 const ProjectList = () => {
   const [Tasks, setTasks] = useState<Task[]>([]);
-  const [openTaskId, setOpenTaskId] = useState<string | null>(null);
   const [formData, setFormData] = useState<Partial<Task>>(defaultForm);
   const [editMode, setEditMode] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -56,10 +55,6 @@ const ProjectList = () => {
     };
     fetchFilteredTasks();
   }, [statusFilter, dueDateFilter, overdueFilter]);
-
-  const toggleTask = (TaskId: string) => {
-    setOpenTaskId((prevId) => (prevId === TaskId ? null : TaskId));
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -265,7 +260,6 @@ const ProjectList = () => {
   {Tasks.length !== 0 ? (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {Tasks.map((Task) => {
-        const isOpen = openTaskId === Task._id;
 
         // Color mapping for statuses
         const getStatusStyles = (status:any) => {
@@ -284,8 +278,7 @@ const ProjectList = () => {
         return (
           <div key={Task._id} className="border rounded-lg overflow-hidden shadow-md bg-white">
             <div
-              onClick={() => toggleTask(Task._id)}
-              className="p-4 flex flex-col justify-between h-full cursor-pointer hover:bg-gray-50 transition"
+              className="p-4 flex flex-col justify-between h-full hover:bg-gray-50 transition"
             >
               <div className="flex justify-between items-center mb-2">
                 {/* Status badge */}
@@ -424,7 +417,7 @@ const ProjectList = () => {
                 Cancel
               </button>
               <button
-                onClick={(e) => { handleDelete(TaskToDelete._id) }}
+                onClick={() => { handleDelete(TaskToDelete._id) }}
                 className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
               >
                 Delete
