@@ -22,7 +22,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
 
           script: |
-              cd /home/ubuntu/YOUR_FRONTEND_REPO
+              cd /home/ubuntu/Task-Manager
 
               git pull origin main
 
